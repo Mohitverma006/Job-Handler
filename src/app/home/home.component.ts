@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
+  dropdownStatus:boolean=true;
+  showDropdown()
+  {
+    this.dropdownStatus=!this.dropdownStatus;
+  }
 
   ngOnInit() {
   }
