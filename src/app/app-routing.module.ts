@@ -5,16 +5,30 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { HomeComponent } from './home/home.component';
 import { HandlerDetailComponent } from './handler-detail/handler-detail.component';
-import { AllApplicantComponent } from './all-applicant/all-applicant.component';
-import { AllApplicantListComponent } from './all-applicant-list/all-applicant-list.component';
 import { FinalApplicantComponent } from './final-applicant/final-applicant.component';
 import { PendingApplicantComponent } from './pending-applicant/pending-applicant.component';
+import { PreMedDetailComponent } from './pre-med-detail/pre-med-detail.component';
+import { PassportDetailComponent } from './passport-detail/passport-detail.component';
+import { FinalMedDetailComponent } from './final-med-detail/final-med-detail.component';
+import { TesdaDetailComponent } from './tesda-detail/tesda-detail.component';
+import { JobOrderDetailComponent } from './job-order-detail/job-order-detail.component';
+import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
 import { PEDOSComponent } from './pedos/pedos.component';
 import { PedosListComponent } from './pedos-list/pedos-list.component';
 import { OWWAComponent } from './owwa/owwa.component';
+import { SchedulePEDOSComponent } from './schedule-pedos/schedule-pedos.component';
+import { ScheduleOWWAComponent } from './schedule-owwa/schedule-owwa.component';
+import { ApplicantComponent } from './applicant/applicant.component';
+import { ApplicantListComponent } from './applicant-list/applicant-list.component';
+import { ApplicantDetailComponent } from './applicant-detail/applicant-detail.component';
 
 const routes: Routes = [
-  {
+{
+    path:'',
+    component:LoginComponent
+},
+
+{
   path:'login',
   component:LoginComponent
 },
@@ -31,33 +45,146 @@ const routes: Routes = [
   component:HomeComponent,
   children:[
 		{
-			path:'',
+			path:'', 
+			component:HandlerDetailComponent
+    },
+    {
+			path:'handlerDetail',
 			component:HandlerDetailComponent
     },
     {
       path:'applicant',
-      component:AllApplicantComponent,
+      component:ApplicantComponent,
       children:[
         {
           path:'',
-          component:AllApplicantListComponent
+          component:ApplicantListComponent,
         },
         {
-          path:'all',
-          component:AllApplicantListComponent
+              path:'detail',
+              component:ApplicantDetailComponent,
+              children:[
+                {
+                  path:'',
+                  component:PersonalDetailComponent
+                },
+                {
+                  path:'personal',
+                  component:PersonalDetailComponent
+                },
+                {
+                  path:'preMed',
+                  component:PreMedDetailComponent
+                },
+                {
+                  path:'passport',
+                  component:PassportDetailComponent
+                },
+                {
+                  path:'finalMed',
+                  component:FinalMedDetailComponent
+                },
+                {
+                  path:'tesda',
+                  component:TesdaDetailComponent
+                },
+                {
+                  path:'jobOrder',
+                  component:JobOrderDetailComponent
+                }
+              ]
+            }
+          ]
         },
-        {
-          path:'final',
-          component:FinalApplicantComponent
-        },
-        {
-          path:'pending',
-          component:PendingApplicantComponent
-        }
 
-        
-      ]
-    },
+    {
+          path:'final',
+          component:FinalApplicantComponent,
+          children:[
+            {
+              path:'',
+              component:ApplicantListComponent,
+            },
+            {
+                  path:'detail',
+                  component:ApplicantDetailComponent,
+                  children:[
+                    {
+                      path:'',
+                      component:PersonalDetailComponent
+                    },
+                    {
+                      path:'personal',
+                      component:PersonalDetailComponent
+                    },
+                    {
+                      path:'preMed',
+                      component:PreMedDetailComponent
+                    },
+                    {
+                      path:'passport',
+                      component:PassportDetailComponent
+                    },
+                    {
+                      path:'finalMed',
+                      component:FinalMedDetailComponent
+                    },
+                    {
+                      path:'tesda',
+                      component:TesdaDetailComponent
+                    },
+                    {
+                      path:'jobOrder',
+                      component:JobOrderDetailComponent
+                    }
+                  ]
+                }
+              ]
+     },
+     {
+          path:'pending',
+          component:PendingApplicantComponent,
+          children:[
+            {
+              path:'',
+              component:ApplicantListComponent,
+            },
+            {
+                  path:'detail',
+                  component:ApplicantDetailComponent,
+                  children:[
+                    {
+                      path:'',
+                      component:PersonalDetailComponent
+                    },
+                    {
+                      path:'personal',
+                      component:PersonalDetailComponent
+                    },
+                    {
+                      path:'preMed',
+                      component:PreMedDetailComponent
+                    },
+                    {
+                      path:'passport',
+                      component:PassportDetailComponent
+                    },
+                    {
+                      path:'finalMed',
+                      component:FinalMedDetailComponent
+                    },
+                    {
+                      path:'tesda',
+                      component:TesdaDetailComponent
+                    },
+                    {
+                      path:'jobOrder',
+                      component:JobOrderDetailComponent
+                    }
+                  ]
+                }
+              ]
+     },
     { 
         path:'pedos',
         component:PEDOSComponent,
@@ -65,22 +192,29 @@ const routes: Routes = [
           {
             path:'',
             component:PedosListComponent
-          }
+          },
+          {
+            path:'pedos',
+            component:PedosListComponent
+          },
+          {
+            path:'schedule-Pedos',
+            component:SchedulePEDOSComponent
+          },
         ]
     },
     {
       path:'OWWA',
       component:OWWAComponent
     },
-    
+    {
+      path:'schedule-owwa',
+      component:ScheduleOWWAComponent
+    },
+
   ]
 },
 
-
-{
-	path:'',
-	component:LoginComponent
-}
 
 ];
 

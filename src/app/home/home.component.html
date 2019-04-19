@@ -20,22 +20,22 @@
   <!-- opening of sidebar container-->
   <div class="col-md-3 sidebar-container">
     <ul class="list sidebar-list">
-      <li class="">Dashboard</li>
-      <li class="link dropdown" (click)="showDropdown()">All Applicants
+      <li class="link"><a routerLink="handlerDetail" routerLinkClass="active">Dashboard</a></li>
+      <li class="link dropdown" (click)="showDropdown()">Applicants
         <ul [hidden]="dropdownStatus">
-          <li class="link"><a routerLink="applicant/all" routerLinkClass="active">All Applicants</a></li>
-          <li class="link"><a routerLink="applicant/final" routerLinkClass="active">Final Applicants</a></li>
-          <li class="link"><a routerLink="applicant/pending" routerLinkClass="active">Pending Applicants</a></li>
+          <li class="link"><a routerLink="applicant" routerLinkClass="active">All Applicants</a></li>
+          <li class="link"><a routerLink="final" routerLinkClass="active">Final Applicants</a></li>
+          <li class="link"><a routerLink="pending" routerLinkClass="active">Pending Applicants</a></li>
         </ul>
       </li>
       <li class="link"><a routerLink="pedos" routerLinkClass="active">Schedule PEDOS</a></li>
-      <li class="link"><a routerLink="./OWWA" routerLinkClass="active">Schedule OWWA</a></li>
+      <li class="link"><a routerLink="OWWA" routerLinkClass="active">Schedule OWWA</a></li>
     </ul>
 
   </div>
   <!-- closing of sidebar container-->
   <!-- opening of custom content -->
-  <div class="col-md-9 content-container">
+  <div class="col-md-9 content-container" style="padding-left: 0; padding-right: 0;">
 
      <router-outlet></router-outlet>
     

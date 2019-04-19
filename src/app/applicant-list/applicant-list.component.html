@@ -1,0 +1,41 @@
+<div class="col-md-12">
+  <table class="table table-striped table-hovered table-bordered">
+    <tr>
+      <td>
+        <select name="select-agents" (change)="agentDetail()">
+          <option value="agent-one">Branch One</option>
+          <option value="agent-two">Branch Two</option>
+          <option value="agent-three">Branch Three</option>
+          <option value="agent-four">Branch Four</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>S.No</th>
+      <th>Agent Name</th>
+      <th>Applicant Name</th>
+      <th>Job Handler Name</th>
+      <th>Email Id</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Ashpi Goyal</td>
+      <td>Monu Sharma</td>
+      <td>Sanyam Negi</td>
+      <td>sanyam@gmail.com</td>
+      <td>Final</td>
+      <td><a routerLink="detail" routerLinkClass="active" class="btn btn-fps">View</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Pranya Verma</td>
+        <td>Ashpi Kumar</td>
+        <td>Harish Goyal</td>
+        <td>harish@gmail.com</td>
+        <td>Pending</td>
+        <td><a routerLink="detail" routerLinkClass="active" class="btn btn-fps">View</a></td>
+      </tr>
+  </table>
+  </div>  

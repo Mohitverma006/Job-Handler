@@ -8,13 +8,22 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { HomeComponent } from './home/home.component';
 import { HandlerDetailComponent } from './handler-detail/handler-detail.component';
-import { AllApplicantComponent } from './all-applicant/all-applicant.component';
-import { AllApplicantListComponent } from './all-applicant-list/all-applicant-list.component';
 import { FinalApplicantComponent } from './final-applicant/final-applicant.component';
 import { PendingApplicantComponent } from './pending-applicant/pending-applicant.component';
 import { PEDOSComponent } from './pedos/pedos.component';
 import { PedosListComponent } from './pedos-list/pedos-list.component';
 import { OWWAComponent } from './owwa/owwa.component';
+import { SchedulePEDOSComponent } from './schedule-pedos/schedule-pedos.component';
+import { ScheduleOWWAComponent } from './schedule-owwa/schedule-owwa.component';
+import { PreMedDetailComponent } from './pre-med-detail/pre-med-detail.component';
+import { PassportDetailComponent } from './passport-detail/passport-detail.component';
+import { FinalMedDetailComponent } from './final-med-detail/final-med-detail.component';
+import { TesdaDetailComponent } from './tesda-detail/tesda-detail.component';
+import { JobOrderDetailComponent } from './job-order-detail/job-order-detail.component';
+import { PersonalDetailComponent } from './personal-detail/personal-detail.component';
+import { ApplicantComponent } from './applicant/applicant.component';
+import { ApplicantListComponent } from './applicant-list/applicant-list.component';
+import { ApplicantDetailComponent } from './applicant-detail/applicant-detail.component';
 
 
 
@@ -26,13 +35,22 @@ import { OWWAComponent } from './owwa/owwa.component';
     CreateAccountComponent,
     HomeComponent,
     HandlerDetailComponent,
-    AllApplicantComponent,
-    AllApplicantListComponent,
     FinalApplicantComponent,
     PendingApplicantComponent,
     PEDOSComponent,
     OWWAComponent,
     PedosListComponent,
+    SchedulePEDOSComponent,
+    ScheduleOWWAComponent,
+    PreMedDetailComponent,
+    PassportDetailComponent,
+    FinalMedDetailComponent,
+    TesdaDetailComponent,
+    JobOrderDetailComponent,
+    PersonalDetailComponent,
+    ApplicantComponent,
+    ApplicantListComponent,
+    ApplicantDetailComponent,
     
   ],
   imports: [
